@@ -5,8 +5,6 @@ import os
 import numpy as np
 import cv2
 import hailo
-from scipy.ndimage import gaussian_filter
-
 
 from hailo_apps_infra.hailo_rpi_common import (
     get_caps_from_pad,
@@ -22,7 +20,7 @@ from hailo_apps_infra.depth_estimation_pipeline import GStreamerDepthEstimationA
 class user_app_callback_class(app_callback_class):
     def __init__(self):
         super().__init__()
-        self.new_variable = 42  # New variable example
+        self.use_frame = True  
 
     def new_function(self):  # New function example
         return "The meaning of life is: "
@@ -46,11 +44,12 @@ def app_callback(pad, info, user_data):
     format, width, height = get_caps_from_pad(pad)
 
     # If the user_data.use_frame is set to True, we can get the video frame from the buffer
-    frame = None
-    if user_data.use_frame and format is not None and width is not None and height is not None:
-        # Get video frame
-        frame = get_numpy_from_buffer(buffer, format, width, height)
-
+    if not user_data.use_frame or format is None or width is None or height is None:
+        # print("No video frame got: ", user_data.use_frame)
+        return Gst.PadProbeReturn.OK
+    
+    # Get video frame
+    frame = get_numpy_from_buffer(buffer, format, width, height)
     return Gst.PadProbeReturn.OK
 
 if __name__ == "__main__":
