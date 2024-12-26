@@ -1,4 +1,5 @@
 # README **SkyEye** - AI-Based Search and Rescue System
+A Dunes team production.
 
 ## Overview 
 **SkyEye** is an advanced AI-powered search and rescue system designed to locate survivors in disaster-stricken areas and send immediate alerts to emergency response teams. Leveraging cutting-edge technologies in artificial intelligence, robotics, and communication networks, SkyEye aims to revolutionize the efficiency and accuracy of rescue missions, reducing response times and saving lives.
@@ -45,12 +46,10 @@ SkyEye seeks to be a game-changer in search and rescue operations by combining A
 ## Video
 [Watch the demo on YouTube](https://youtu.be/hW3rBgcTqko)
 
-## Versions
-Add the versions that you tested the examples on.
-
 ## Setup Instructions
+After following the standard installation for this repo, all further setup required involves hardware:
 
-### Prerequisites - 
+### Hardware Setup - 
 1. Rpi5, AI HAT, RpiCam
 2. Projector (We used BENQ TH685)
 3. Sandbox (We used 80 KG of sand over 50cm X 70cm X 30cm plastic box)
