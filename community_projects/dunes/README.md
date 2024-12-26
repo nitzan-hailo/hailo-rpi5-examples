@@ -57,7 +57,7 @@ Add the versions that you tested the examples on.
 2. Projector (We used BENQ TH685)
 3. Sandbox (We used 80 KG of sand over 50cm X 70cm X 30cm plastic box)
 4. We hanged the projector from the ceiling, a picture of our setup can be found [here](https://add.url.here)
-5. Extra - We used 3D printed cover for the projector + Rpi. 3D models can be found [here](https://add.url.here)
+5. Extra - We used 3D printed cover for the projector + Rpi. 3D models can be found [here](https://drive.google.com/drive/folders/1UvcrxFtw0vaQCFMcMy3W8CueZKsj-L-H?usp=sharing)
 
 ### Calculating Offsets
 The project accepts x and y offsets to match different configurations of camera/projector for smooth mapping between different perspectives. The offsets can be given fromt he command line, and they can be calculated with:
@@ -71,18 +71,18 @@ The project accepts x and y offsets to match different configurations of camera/
 - \( \phi_p \): Projector's FOV angle in the vertical direction.
  
 ### Formulas:
-#### Horizontal Offset (\( `$\Delta$` x \)):
+#### Horizontal Offset \( Δ x \):
 \[
-`$\Delta$` x = X \cdot \frac{\tan(\theta_c / 2)}{\tan(\theta_p / 2)}
+Δ x = X \cdot \frac{\tan(\theta_c / 2)}{\tan(\theta_p / 2)}
 \]
 
-#### Vertical Offset (\( `$\Delta$` y \)):
+#### Vertical Offset \( Δ y \):
 \[
-`$\Delta$` y = Y \cdot \frac{\tan(\phi_c / 2)}{\tan(\phi_p / 2)}
+Δ y = Y \cdot \frac{\tan(\phi_c / 2)}{\tan(\phi_p / 2)}
 \]
 
 ## Usage
-With `$\Delta$` x and `$\Delta$` y you can now runt he application:
+With Δ x and Δ y you can now runt he application:
 ```bash
 X_OFFSET=<\delta x>  Y_OFFSET=<\delta y>  python community_projects/dunes/dunes.py
 ```
