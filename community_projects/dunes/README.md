@@ -84,3 +84,5 @@ With Δ x and Δ y you can now runt he application:
 ```bash
 X_OFFSET=<\delta x>  Y_OFFSET=<\delta y>  python community_projects/SkyEye/SkyEye.py
 ```
+## Future
+SkyEye brings aerial monitoring to the hands of the people. Makers all around can expand this applicationt o their own needs - wildlife tracing, agricultral counting, event monitoring, and much more!
