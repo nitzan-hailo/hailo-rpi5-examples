@@ -1,0 +1,5 @@
+gdown
+numpy<2.0.0
+setproctitle
+opencv-python
+git+https://github.com/giladnah/hailo-apps-infra.git

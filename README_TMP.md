@@ -5,7 +5,7 @@
 ## Prerequisites - 
 1. Rpi5, AI HAT, RpiCam
 2. Projector (We used BENQ TH685)
-3. Sandbox (We used 80 KG of sand over 50cm X 70cm X 50cm plastic box)
+3. Sandbox (We used 80 KG of sand over 50cm X 70cm X 30cm plastic box)
 4. We hanged the projector from the ceiling, a picture of our setup can be found [here](https://add.url.here)
 5. Extra - We used 3D printed cover for the projector + Rpi. 3D models can be found [here](https://add.url.here)
 
