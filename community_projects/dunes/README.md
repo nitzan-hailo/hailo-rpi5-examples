@@ -1,7 +1,7 @@
-# README **Dunes** - AI-Based Search and Rescue System
+# README **SkyEye** - AI-Based Search and Rescue System
 
 ## Overview 
-**Dunes** is an advanced AI-powered search and rescue system designed to locate survivors in disaster-stricken areas and send immediate alerts to emergency response teams. Leveraging cutting-edge technologies in artificial intelligence, robotics, and communication networks, Dunes aims to revolutionize the efficiency and accuracy of rescue missions, reducing response times and saving lives.
+**SkyEye** is an advanced AI-powered search and rescue system designed to locate survivors in disaster-stricken areas and send immediate alerts to emergency response teams. Leveraging cutting-edge technologies in artificial intelligence, robotics, and communication networks, SkyEye aims to revolutionize the efficiency and accuracy of rescue missions, reducing response times and saving lives.
 
 ---
 
@@ -40,12 +40,10 @@
 
 ### Vision
 
-Dunes seeks to be a game-changer in search and rescue operations by combining AI’s capabilities with innovative robotics and sensing technologies. The project envisions a future where no disaster survivor goes unnoticed, ensuring every life has the highest chance of being saved.
+SkyEye seeks to be a game-changer in search and rescue operations by combining AI’s capabilities with innovative robotics and sensing technologies. The project envisions a future where no disaster survivor goes unnoticed, ensuring every life has the highest chance of being saved.
 
 ## Video
-Add a video link from youtube - for example:
-
-[![Watch the demo on YouTube](https://img.youtube.com/vi/XXizBHtCLew/0.jpg)](https://youtu.be/XXizBHtCLew)
+[Watch the demo on YouTube](https://youtu.be/hW3rBgcTqko)
 
 ## Versions
 Add the versions that you tested the examples on.
@@ -56,7 +54,7 @@ Add the versions that you tested the examples on.
 1. Rpi5, AI HAT, RpiCam
 2. Projector (We used BENQ TH685)
 3. Sandbox (We used 80 KG of sand over 50cm X 70cm X 30cm plastic box)
-4. We hanged the projector from the ceiling, a picture of our setup can be found [here](https://add.url.here)
+4. We hanged the projector from the ceiling, a picture of our setup can be found [here](https://drive.google.com/drive/folders/1oga1fwvLBtspIVwjxbryvHNtxSWr6N6F?usp=sharing)
 5. Extra - We used 3D printed cover for the projector + Rpi. 3D models can be found [here](https://drive.google.com/drive/folders/1UvcrxFtw0vaQCFMcMy3W8CueZKsj-L-H?usp=sharing)
 
 ### Calculating Offsets
@@ -84,5 +82,5 @@ The project accepts x and y offsets to match different configurations of camera/
 ## Usage
 With Δ x and Δ y you can now runt he application:
 ```bash
-X_OFFSET=<\delta x>  Y_OFFSET=<\delta y>  python community_projects/dunes/dunes.py
+X_OFFSET=<\delta x>  Y_OFFSET=<\delta y>  python community_projects/SkyEye/SkyEye.py
 ```
