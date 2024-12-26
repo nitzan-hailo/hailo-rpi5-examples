@@ -42,7 +42,6 @@
 
 Dunes seeks to be a game-changer in search and rescue operations by combining AI’s capabilities with innovative robotics and sensing technologies. The project envisions a future where no disaster survivor goes unnoticed, ensuring every life has the highest chance of being saved.
 
-
 ## Video
 Add a video link from youtube - for example:
 
@@ -53,25 +52,37 @@ Add the versions that you tested the examples on.
 
 ## Setup Instructions
 
-## Prerequisites - 
+### Prerequisites - 
 1. Rpi5, AI HAT, RpiCam
 2. Projector (We used BENQ TH685)
 3. Sandbox (We used 80 KG of sand over 50cm X 70cm X 30cm plastic box)
 4. We hanged the projector from the ceiling, a picture of our setup can be found [here](https://add.url.here)
 5. Extra - We used 3D printed cover for the projector + Rpi. 3D models can be found [here](https://add.url.here)
 
-How to install dependencies and run the project - for example:
+### Calculating Offsets
+The project accepts x and y offsets to match different configurations of camera/projector for smooth mapping between different perspectives. The offsets can be given fromt he command line, and they can be calculated with:
 
-Run the following commands:
-```bash
-pip install -r requirenemts.txt
-./download_resources.sh
-```
+### Variables:
+- \( X \): Horizontal distance between the camera and projector (in their shared plane).
+- \( Y \): Height of the camera-projector plane above the ground.
+- \( \theta_c \): Camera's field of view (FOV) angle in the horizontal direction.
+- \( \phi_c \): Camera's FOV angle in the vertical direction.
+- \( \theta_p \): Projector's field of view (FOV) angle in the horizontal direction.
+- \( \phi_p \): Projector's FOV angle in the vertical direction.
+ 
+### Formulas:
+#### Horizontal Offset (\( \Delta x \)):
+\[
+\Delta x = X \cdot \frac{\tan(\theta_c / 2)}{\tan(\theta_p / 2)}
+\]
+
+#### Vertical Offset (\( \Delta y \)):
+\[
+\Delta y = Y \cdot \frac{\tan(\phi_c / 2)}{\tan(\phi_p / 2)}
+\]
 
 ## Usage
-Examples of how to run the script - for example:
+With \Delta x and \Delta y you can now runt he application:
 ```bash
-python template_example.py
+python community_projects/dunes/dunes.py
 ```
-
-A good README ensures that others can understand and use your project.
