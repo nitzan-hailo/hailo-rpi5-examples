@@ -71,18 +71,18 @@ The project accepts x and y offsets to match different configurations of camera/
 - \( \phi_p \): Projector's FOV angle in the vertical direction.
  
 ### Formulas:
-#### Horizontal Offset (\( \Delta x \)):
+#### Horizontal Offset (\( `$\Delta$` x \)):
 \[
-\Delta x = X \cdot \frac{\tan(\theta_c / 2)}{\tan(\theta_p / 2)}
+`$\Delta$` x = X \cdot \frac{\tan(\theta_c / 2)}{\tan(\theta_p / 2)}
 \]
 
-#### Vertical Offset (\( \Delta y \)):
+#### Vertical Offset (\( `$\Delta$` y \)):
 \[
-\Delta y = Y \cdot \frac{\tan(\phi_c / 2)}{\tan(\phi_p / 2)}
+`$\Delta$` y = Y \cdot \frac{\tan(\phi_c / 2)}{\tan(\phi_p / 2)}
 \]
 
 ## Usage
-With \Delta x and \Delta y you can now runt he application:
+With `$\Delta$` x and `$\Delta$` y you can now runt he application:
 ```bash
 X_OFFSET=<\delta x>  Y_OFFSET=<\delta y>  python community_projects/dunes/dunes.py
 ```
