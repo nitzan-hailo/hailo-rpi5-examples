@@ -63,20 +63,20 @@ The project accepts x and y offsets to match different configurations of camera/
 ### Variables:
 - \( X \): Horizontal distance between the camera and projector (in their shared plane).
 - \( Y \): Height of the camera-projector plane above the ground.
-- \( \theta_c \): Camera's field of view (FOV) angle in the horizontal direction.
-- \( \phi_c \): Camera's FOV angle in the vertical direction.
-- \( \theta_p \): Projector's field of view (FOV) angle in the horizontal direction.
-- \( \phi_p \): Projector's FOV angle in the vertical direction.
+- \( Θc \): Camera's field of view (FOV) angle in the horizontal direction.
+- \( Φc \): Camera's FOV angle in the vertical direction.
+- \( Θp \): Projector's field of view (FOV) angle in the horizontal direction.
+- \( Φp \): Projector's FOV angle in the vertical direction.
  
 ### Formulas:
 #### Horizontal Offset \( Δ x \):
 \[
-Δ x = X \cdot \frac{\tan(\theta_c / 2)}{\tan(\theta_p / 2)}
+Δ x = X dot \frac{tan(Θc / 2)}{tan(Θp / 2)}
 \]
 
 #### Vertical Offset \( Δ y \):
 \[
-Δ y = Y \cdot \frac{\tan(\phi_c / 2)}{\tan(\phi_p / 2)}
+Δ y = Y dot \frac{tan(Φc / 2)}{tan(Φp / 2)}
 \]
 
 ## Usage
