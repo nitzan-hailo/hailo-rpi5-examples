@@ -84,5 +84,5 @@ The project accepts x and y offsets to match different configurations of camera/
 ## Usage
 With \Delta x and \Delta y you can now runt he application:
 ```bash
-python community_projects/dunes/dunes.py
+X_OFFSET=<\delta x>  Y_OFFSET=<\delta y>  python community_projects/dunes/dunes.py
 ```
