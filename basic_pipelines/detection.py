@@ -5,6 +5,8 @@ import os
 import numpy as np
 import cv2
 import hailo
+import subprocess
+import multiprocessing
 
 from hailo_apps_infra.hailo_rpi_common import (
     get_caps_from_pad,
@@ -28,6 +30,13 @@ class user_app_callback_class(app_callback_class):
 # -----------------------------------------------------------------------------------------------
 # User-defined callback function
 # -----------------------------------------------------------------------------------------------
+e = multiprocessing.Event()
+
+def run():
+    while True:
+        e.wait()
+        subprocess.run(["espeak", "S. O. S.! found something! check monitor!"])
+        e.clear()
 
 # This is the callback function that will be called when data is available from the pipeline
 def app_callback(pad, info, user_data):
@@ -74,11 +83,16 @@ def app_callback(pad, info, user_data):
         frame = cv2.cvtColor(frame, cv2.COLOR_RGB2BGR)
         user_data.set_frame(frame)
 
+    if detection_count != 0 and not e.is_set():
+        e.set()
+
     print(string_to_print)
     return Gst.PadProbeReturn.OK
 
 if __name__ == "__main__":
     # Create an instance of the user app callback class
     user_data = user_app_callback_class()
+    p = multiprocessing.Process(target=run, args=())
+    p.start()
     app = GStreamerDetectionApp(app_callback, user_data)
     app.run()
